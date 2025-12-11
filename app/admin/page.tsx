@@ -266,7 +266,7 @@ export default function AdminPage() {
             <InputNumber
               id="number"
               value={number}
-              onValueChange={(e) => setNumber(e.value)}
+              onValueChange={(e) => setNumber(e.value ?? null)}
               min={0}
               max={type === '2digit' ? 99 : 999}
               placeholder={type === '2digit' ? '00-99' : '000-999'}
@@ -282,7 +282,7 @@ export default function AdminPage() {
             <InputNumber
               id="limit"
               value={limit}
-              onValueChange={(e) => setLimit(e.value)}
+              onValueChange={(e) => setLimit(e.value ?? null)}
               min={0}
               mode="decimal"
               minFractionDigits={0}

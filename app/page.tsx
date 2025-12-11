@@ -158,7 +158,7 @@ export default function Home() {
             <InputNumber
               id="number"
               value={number}
-              onValueChange={(e) => setNumber(e.value)}
+              onValueChange={(e) => setNumber(e.value ?? null)}
               min={0}
               max={type === '2digit' ? 99 : 999}
               placeholder={type === '2digit' ? '00-99' : '000-999'}
@@ -174,7 +174,7 @@ export default function Home() {
             <InputNumber
               id="price"
               value={price}
-              onValueChange={(e) => setPrice(e.value)}
+              onValueChange={(e) => setPrice(e.value ?? null)}
               min={0}
               max={10000}
               mode="decimal"
