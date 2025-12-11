@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://jesadagyoto:Vc6qycSrcgt6jrzd@lotto-checker.yyd4h8q.mongodb.net/?appName=lotto-checker';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+  throw new Error('Please define the MONGODB_URI environment variable in .env.local or Vercel environment variables');
 }
 
 interface MongooseCache {
